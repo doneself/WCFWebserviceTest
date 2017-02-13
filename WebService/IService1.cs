@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,7 +13,11 @@ namespace WebService
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        CompositeType GetStudents();
 
+        [OperationContract]
+        Student GetFirstStudent();
         //[OperationContract]
         //string GetData(int value);
 
