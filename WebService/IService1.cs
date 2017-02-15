@@ -22,7 +22,7 @@ namespace WebService
         CompositeType GetStudents();
 
         [OperationContract]
-        [WebInvoke(Method = "POST",
+        [WebInvoke(Method = "GET",
           BodyStyle = WebMessageBodyStyle.Bare,
           ResponseFormat = WebMessageFormat.Json,
           RequestFormat = WebMessageFormat.Json,
