@@ -14,9 +14,19 @@ namespace WebService
     public interface IService1
     {
         [OperationContract]
+        [WebInvoke(Method = "GET",
+          BodyStyle = WebMessageBodyStyle.Bare,
+          ResponseFormat = WebMessageFormat.Json,
+          RequestFormat = WebMessageFormat.Json,
+          UriTemplate = "students")]
         CompositeType GetStudents();
 
         [OperationContract]
+        [WebInvoke(Method = "POST",
+          BodyStyle = WebMessageBodyStyle.Bare,
+          ResponseFormat = WebMessageFormat.Json,
+          RequestFormat = WebMessageFormat.Json,
+          UriTemplate = "firststudent")]
         Student GetFirstStudent();
         //[OperationContract]
         //string GetData(int value);
